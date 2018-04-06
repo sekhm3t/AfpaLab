@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title><?= $headTitle ?></title>
+	<meta charset="utf-8">
+	<meta name="description" content="Exercice 2.2">
+	<!-- For Internet Explorer : to force css3 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<!-- Tablettes 'n' Mobiles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- main css -->
+	<link type="text/css" rel="stylesheet" href="/css/default.css">
+</head>
+
+<body>
+<!-- Nav -->
+<nav>
+	<span class="nav__txt">AfpaLab</span>
+	<a href="/" class='nav__link <?= ($_SERVER["REQUEST_URI"] === "/") ? "nav__link--active" : ""; ?>'>Accueil</a>
+	<a href="/route.php?page=formations"
+	   class='nav__link <?= ($_GET["page"] === "formations") ? "nav__link--active" : ""; ?>'>Formations</a>
+	<a href="/route.php?page=stagiaires"
+	   class='nav__link <?= ($_GET["page"] === "stagiaires") ? "nav__link--active" : ""; ?>'>Stagiaires</a>
+	<a href="/route.php?page=ressources"
+	   class='nav__link <?= ($_GET["page"] === "ressources") ? "nav__link--active" : ""; ?>'>Ressources</a>
+	<span id="login" class="nav__login" onclick="open__login()"><i class="fas fa-user-circle"></i> Login</span>
+</nav>
+
+<!-- Aside -->
+<aside></aside>
+
+<!-- Section -->
+<section>
+	<?php require $aConfig["PATHS"]["PATH_HOME"] . $aConfig["PATHS"]["PATH_VIEW"] . $page . ".html" ?>
+</section>
+
+<!-- Footer -->
+<footer><span class="footer__text">AfpaLab 2016-<?= date("Y"); ?></span></footer>
+
+<!-- Modal for login -->
+<div id="modal__login" class="modal">
+	<div id="login__container" class="modal__container">
+		<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
+		<form method="post" action="" id="login__form">
+			<label for="pseudo">Pseudo:</label><input type="text" id="pseudo" placeholder="Pseudo" required>
+			<label for="password">Mot de passe:</label><input type="password" id="password" placeholder="Mot de passe" required>
+			<input type="button" id="login__btn" class="btn__generic" value="Valider">
+			<input type="checkbox" id="remember" checked><label for="remember">Se souvenir de moi</label>
+		</form>
+	</div>
+</div>
+
+<!-- Modal for contact -->
+<div id="modal__login" class="modal">
+	<div id="login__container" class="modal__container">
+		<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
+		<form method="post" action="" id="login__form">
+			<label for="pseudo">Pseudo:</label><input type="text" id="pseudo" placeholder="Pseudo" required>
+			<label for="password">Mot de passe:</label><input type="password" id="password" placeholder="Mot de passe" required>
+			<input type="button" id="login__btn" class="btn__generic" value="Valider">
+			<input type="checkbox" id="remember" checked><label for="remember">Se souvenir de moi</label>
+		</form>
+	</div>
+</div>
+
+<!-- Scripts -->
+<!-- JQuery library -->
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<!-- JS -->
+<script type="text/javascript" src="/js/default.js"></script>
+
+</body>
+
+</html>

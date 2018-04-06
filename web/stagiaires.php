@@ -1,0 +1,3 @@
+<?php
+
+$headTitle = "Stagiaires";
