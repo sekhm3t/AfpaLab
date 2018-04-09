@@ -4,7 +4,7 @@
 <head>
 	<title><?= $headTitle ?></title>
 	<meta charset="utf-8">
-	<meta name="description" content="Exercice 2.2">
+	<meta name="description" content="">
 	<!-- For Internet Explorer : to force css3 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<!-- Tablettes 'n' Mobiles -->
@@ -41,27 +41,31 @@
 
 <!-- Modal for login -->
 <div id="modal__login" class="modal">
-	<div id="login__container" class="modal__container">
+	<div id="login__container" class="modal__container animate">
 		<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
-		<form method="post" action="" id="login__form">
+		<div id="login__form">
 			<label for="pseudo">Pseudo:</label><input type="text" id="pseudo" placeholder="Pseudo" required>
 			<label for="password">Mot de passe:</label><input type="password" id="password" placeholder="Mot de passe" required>
 			<input type="button" id="login__btn" class="btn__generic" value="Valider">
 			<input type="checkbox" id="remember" checked><label for="remember">Se souvenir de moi</label>
-		</form>
+		</div>
 	</div>
 </div>
 
 <!-- Modal for contact -->
 <div id="modal__contact" class="modal">
-	<div id="contact__container" class="modal__container">
-		<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
-		<form method="post" action="" id="contact__form">
-			<span>Destinataire: </span><span id="recipient"></span>
-			<label for="subject">Sujet: </label><input type="text" id="subject">
-			<label for="message">Mot de passe:</label><textarea id="message"></textarea>
+	<div id="contact__container" class="modal__container animate">
+		<div>
+			<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
+			<div id="contact__form__header">
+				<span id="recipient"></span>
+				<label for="subject">Sujet: </label><input type="text" id="subject">
+			</div>
+		</div>
+		<div id="contact__form__body">
+			<label for="message">Message:</label><textarea id="message"></textarea>
 			<input type="button" id="send__btn" class="btn__generic" value="Envoyer">
-		</form>
+		</div>
 	</div>
 </div>
 

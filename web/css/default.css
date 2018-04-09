@@ -1,4 +1,7 @@
+/************************************************************/
 /*		Fonts		*/
+/************************************************************/
+
 /* Font Awesome (logo) */
 @import "fontawesome-all.css";
 
@@ -9,21 +12,46 @@
 	src: local('AGENCYB'), url('/fonts/AGENCYB.woff') format('woff'), url('/fonts/AGENCYB.ttf') format('truetype');
 }
 
-/*		Overall		*/
+/************************************************************/
+/*		Zoom Animation		*/
+/************************************************************/
+
+.animate {
+	-webkit-animation: animatezoom 0.8s;
+	animation: animatezoom 0.8s
+}
+
+@-webkit-keyframes animatezoom {
+	from {-webkit-transform: scale(0)}
+	to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
+
+/************************************************************/
+/*		HTML and Body		*/
+/************************************************************/
 
 html {
 	font: 1em "Agency FB";
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	background: #ecf0f1;
 }
 
+/************************************************************/
 /*		Nav		*/
+/************************************************************/
 
 nav {
 	background: linear-gradient(#3F6600, #679F0B, #69A010);
@@ -64,15 +92,21 @@ nav img {
 	background: linear-gradient(#69A010, #9DD445, #CAEC97);
 }
 
+/************************************************************/
 /*		Section		*/
+/************************************************************/
 
 section {
-	height: 600px;
-	width: 70%;
-	margin: 100px auto auto auto;
+	max-height: 100%;
+	width: 100%;
+	padding-top: 100px;
+	background: url("/img/afpalab_logo_low_opacity.png") no-repeat left;
+	background-size: contain;
 }
 
+/************************************************************/
 /*		Footer		*/
+/************************************************************/
 
 footer {
 	text-align: center;
@@ -86,11 +120,15 @@ footer {
 }
 
 .footer__text {
+	width: 100%;
 	font-size: 1.2em;
 	padding: 5px;
+	float: left;
 }
 
+/************************************************************/
 /*		Modals		*/
+/************************************************************/
 
 .modal {
 	display: none;
@@ -114,7 +152,9 @@ footer {
 	border-radius: 10px;
 }
 
+/************************************************************/
 /*		Modal login		*/
+/************************************************************/
 
 #login__container {
 	max-width: 600px;
@@ -151,7 +191,44 @@ footer {
 	vertical-align: middle;
 }
 
+/************************************************************/
+/*		Modal contact		*/
+/************************************************************/
+
+#contact__container img {
+	width: 14%;
+	margin-right: 5%;
+	float: left;
+	vertical-align: middle;
+}
+
+#contact__form__header {
+	width: 80%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#recipient {
+	display: inline-block;
+	width: 100%;
+}
+
+#subject {
+	display: inline-block;
+	width: 100%;
+	padding: 4px 10px;
+	margin: 8px 0px;
+	box-sizing: border-box;
+}
+
+#contact__form__body {
+	width: 100%;
+	clear: both;
+}
+
+/************************************************************/
 /*		Elements		*/
+/************************************************************/
 
 .btn__generic {
 	display: inline-block;
@@ -176,9 +253,9 @@ footer {
 	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-/*************************************************************************/
+/************************************************************/
 /*		Page stagiaire de Nico		*/
-/*************************************************************************/
+/************************************************************/
 
 p {
 	font-size: 1.5em;
@@ -195,12 +272,13 @@ h3 {
 /* GLOBAL LAYOUT */
 
 .slide__container {
-	width: 100%;
-	height: 100%;
-	background-color: rgba(255, 255, 255, 0.2);
+	width: 70%;
+	height: 70%;
+	background-color: rgba(255, 255, 255, 0.7);
 	box-shadow: 10px 10px 10px grey;
 
 	border-radius: 10px 10px 0 0;
+	margin: auto;
 	display: flex;
 	flex-flow: row wrap;
 }
