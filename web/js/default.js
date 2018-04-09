@@ -12,6 +12,6 @@ function open__contact(user, key_user) {
 window.onclick = function (ev) {
 	let modals = ev.target === document.getElementById("modal__login") || ev.target === document.getElementById("modal__contact");
 	if (modals) {
-		$("#modal__login").hide();
+		$(".modal").hide();
 	}
 };

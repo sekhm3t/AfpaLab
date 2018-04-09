@@ -16,6 +16,7 @@
 <body>
 <!-- Nav -->
 <nav>
+	<img src="/img/afpalab_logo_white.png" alt="Logo AfpaLab">
 	<span class="nav__txt">AfpaLab</span>
 	<a href="/" class='nav__link <?= ($_SERVER["REQUEST_URI"] === "/") ? "nav__link--active" : ""; ?>'>Accueil</a>
 	<a href="/route.php?page=formations"
@@ -24,7 +25,7 @@
 	   class='nav__link <?= ($_GET["page"] === "stagiaires") ? "nav__link--active" : ""; ?>'>Stagiaires</a>
 	<a href="/route.php?page=ressources"
 	   class='nav__link <?= ($_GET["page"] === "ressources") ? "nav__link--active" : ""; ?>'>Ressources</a>
-	<span id="login" class="nav__login" onclick="open__login()"><i class="fas fa-user-circle"></i> Login</span>
+	<span class="nav__login" onclick="open__login()"><i class="fas fa-user-circle"></i> Login</span>
 </nav>
 
 <!-- Aside -->
@@ -52,14 +53,14 @@
 </div>
 
 <!-- Modal for contact -->
-<div id="modal__login" class="modal">
-	<div id="login__container" class="modal__container">
+<div id="modal__contact" class="modal">
+	<div id="contact__container" class="modal__container">
 		<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
-		<form method="post" action="" id="login__form">
-			<label for="pseudo">Pseudo:</label><input type="text" id="pseudo" placeholder="Pseudo" required>
-			<label for="password">Mot de passe:</label><input type="password" id="password" placeholder="Mot de passe" required>
-			<input type="button" id="login__btn" class="btn__generic" value="Valider">
-			<input type="checkbox" id="remember" checked><label for="remember">Se souvenir de moi</label>
+		<form method="post" action="" id="contact__form">
+			<span>Destinataire: </span><span id="recipient"></span>
+			<label for="subject">Sujet: </label><input type="text" id="subject">
+			<label for="message">Mot de passe:</label><textarea id="message"></textarea>
+			<input type="button" id="send__btn" class="btn__generic" value="Envoyer">
 		</form>
 	</div>
 </div>
