@@ -1,6 +1,22 @@
 @media only screen and (max-width: 1024px) {
 
-	.options__report, .options__contact {
-		font-size: 0.8em
+	/************************************************************/
+	/*								Nav							*/
+	/************************************************************/
+	nav {
+		height: 55px;
+		font-size: 1.6em;
 	}
+
+	/************************************************************/
+	/*					Page stagiaire de Nico					*/
+	/************************************************************/
+	.student__title {
+		font-size: 1.3em;
+	}
+
+	.student__website {
+		font-size: 0.8em;
+	}
+
 }

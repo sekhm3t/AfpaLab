@@ -8,8 +8,8 @@
 /* Agency */
 @font-face {
 	font-family: 'AGENCYB';
-	src: url('/fonts/AGENCYB.eot');
-	src: local('AGENCYB'), url('/fonts/AGENCYB.woff') format('woff'), url('/fonts/AGENCYB.ttf') format('truetype');
+	src: url('../fonts/AGENCYB.eot');
+	src: local('AGENCYB'), url('../fonts/AGENCYB.woff') format('woff'), url('../fonts/AGENCYB.ttf') format('truetype');
 }
 
 /************************************************************/

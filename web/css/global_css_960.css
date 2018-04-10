@@ -1,4 +1,11 @@
 @media only screen and (max-width: 960px) {
-	.options__report, .options__contact {
+
+	/************************************************************/
+	/*								Nav							*/
+	/************************************************************/
+	nav {
+		height: 50px;
+		font-size: 1.4em;
 	}
+
 }
