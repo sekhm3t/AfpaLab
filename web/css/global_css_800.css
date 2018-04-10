@@ -1,0 +1,94 @@
+@media screen and (max-width: 800px) {
+
+	.slide__header {
+		height: auto;
+	}
+
+	p {
+		padding: 30px;
+	}
+
+	.slide__container {
+		height: auto;
+
+	}
+
+	.pic__container {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		order: 2;
+	}
+
+	.pic__container img {
+		width: 30%;
+	}
+
+	.title__container {
+		width: 100%;
+		height: auto;
+		text-align: center;
+		order: 3;
+	}
+
+	.options__social {
+		height: 25%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.options__report {
+		order: 1;
+		width: auto;
+		margin: 5px 5px 0 auto;
+	}
+
+	.options__contact {
+		text-align: center;
+		margin: 10px auto;
+		font-size: 1em;
+		height: 70px;
+		display: block;
+		order: 4;
+	}
+
+	.slide__aside__right {
+		width: 100%;
+		height: auto;
+		border: none;
+		margin-top: 30px;
+	}
+
+	.slide__main {
+		width: 100%;
+		height: auto;
+	}
+
+	.slide__aside__left {
+		width: 100%;
+		height: auto;
+		border: none;
+		margin-top: 30px;
+	}
+
+	.techno__list {
+		width: 100%;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	.techno_list li {
+		margin: auto;
+	}
+
+	.doc__list {
+		width: 100%;
+		margin: auto;
+		flex-flow: row wrap;
+	}
+
+	.doc__list li {
+		margin: auto;
+	}
+
+}

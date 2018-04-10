@@ -1,0 +1,6 @@
+@media only screen and (max-width: 1024px) {
+
+	.options__report, .options__contact {
+		font-size: 0.8em
+	}
+}

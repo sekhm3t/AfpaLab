@@ -10,61 +10,64 @@
 	<!-- Tablettes 'n' Mobiles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- main css -->
-	<link type="text/css" rel="stylesheet" href="/css/default.css">
+	<link type="text/css" rel="stylesheet" href="/css/css_loader.css">
 </head>
 
 <body>
-<!-- Nav -->
-<nav>
-	<img src="/img/afpalab_logo_white.png" alt="Logo AfpaLab">
-	<span class="nav__txt">AfpaLab</span>
-	<a href="/" class='nav__link <?= ($_SERVER["REQUEST_URI"] === "/") ? "nav__link--active" : ""; ?>'>Accueil</a>
-	<a href="/route.php?page=formations"
-	   class='nav__link <?= ($_GET["page"] === "formations") ? "nav__link--active" : ""; ?>'>Formations</a>
-	<a href="/route.php?page=stagiaires"
-	   class='nav__link <?= ($_GET["page"] === "stagiaires") ? "nav__link--active" : ""; ?>'>Stagiaires</a>
-	<a href="/route.php?page=ressources"
-	   class='nav__link <?= ($_GET["page"] === "ressources") ? "nav__link--active" : ""; ?>'>Ressources</a>
-	<span class="nav__login" onclick="open__login()"><i class="fas fa-user-circle"></i> Login</span>
-</nav>
+<div id="page">
+	<!-- Nav -->
+	<nav>
+		<img src="/img/afpalab_logo_white.png" alt="Logo AfpaLab">
+		<span class="nav__txt">AfpaLab</span>
+		<a href="/" class='nav__link <?= ($_SERVER["REQUEST_URI"] === "/") ? "nav__link--active" : ""; ?>'>Accueil</a>
+		<a href="/route.php?page=formations"
+		   class='nav__link <?= ($_GET["page"] === "formations") ? "nav__link--active" : ""; ?>'>Formations</a>
+		<a href="/route.php?page=stagiaires"
+		   class='nav__link <?= ($_GET["page"] === "stagiaires") ? "nav__link--active" : ""; ?>'>Stagiaires</a>
+		<a href="/route.php?page=ressources"
+		   class='nav__link <?= ($_GET["page"] === "ressources") ? "nav__link--active" : ""; ?>'>Ressources</a>
+		<span class="nav__login" onclick="open__login()"><i class="fas fa-user-circle"></i> Login</span>
+	</nav>
 
-<!-- Aside -->
-<aside></aside>
+	<!-- Aside -->
+	<aside></aside>
 
-<!-- Section -->
-<section>
-	<?php require $aConfig["PATHS"]["PATH_HOME"] . $aConfig["PATHS"]["PATH_VIEW"] . $page . ".html" ?>
-</section>
+	<!-- Section -->
+	<section>
+		<?php require $aConfig["PATHS"]["PATH_HOME"] . $aConfig["PATHS"]["PATH_VIEW"] . $page . ".html" ?>
+	</section>
 
-<!-- Footer -->
-<footer><span class="footer__text">AfpaLab 2016-<?= date("Y"); ?></span></footer>
+	<!-- Footer -->
+	<footer><span class="footer__text">AfpaLab 2016-<?= date("Y"); ?></span></footer>
 
-<!-- Modal for login -->
-<div id="modal__login" class="modal">
-	<div id="login__container" class="modal__container animate">
-		<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
-		<div id="login__form">
-			<label for="pseudo">Pseudo:</label><input type="text" id="pseudo" placeholder="Pseudo" required>
-			<label for="password">Mot de passe:</label><input type="password" id="password" placeholder="Mot de passe" required>
-			<input type="button" id="login__btn" class="btn__generic" value="Valider">
-			<input type="checkbox" id="remember" checked><label for="remember">Se souvenir de moi</label>
-		</div>
-	</div>
-</div>
-
-<!-- Modal for contact -->
-<div id="modal__contact" class="modal">
-	<div id="contact__container" class="modal__container animate">
-		<div>
+	<!-- Modal for login -->
+	<div id="modal__login" class="modal">
+		<div id="login__container" class="modal__container animate">
 			<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
-			<div id="contact__form__header">
-				<span id="recipient"></span>
-				<label for="subject">Sujet: </label><input type="text" id="subject">
+			<div id="login__form">
+				<label for="pseudo">Pseudo:</label><input type="text" id="pseudo" placeholder="Pseudo" required>
+				<label for="password">Mot de passe:</label><input type="password" id="password"
+				                                                  placeholder="Mot de passe" required>
+				<input type="button" id="login__btn" class="btn__generic" value="Valider">
+				<input type="checkbox" id="remember" checked><label for="remember">Se souvenir de moi</label>
 			</div>
 		</div>
-		<div id="contact__form__body">
-			<label for="message">Message:</label><textarea id="message"></textarea>
-			<input type="button" id="send__btn" class="btn__generic" value="Envoyer">
+	</div>
+
+	<!-- Modal for contact -->
+	<div id="modal__contact" class="modal">
+		<div id="contact__container" class="modal__container animate">
+			<div>
+				<img src="/img/afpalab_logo.png" alt="Logo AfpaLab">
+				<div id="contact__form__header">
+					<span id="recipient"></span>
+					<label for="subject">Sujet: </label><input type="text" id="subject">
+				</div>
+			</div>
+			<div id="contact__form__body">
+				<label for="message">Message:</label><textarea id="message"></textarea>
+				<input type="button" id="send__btn" class="btn__generic" value="Envoyer">
+			</div>
 		</div>
 	</div>
 </div>
