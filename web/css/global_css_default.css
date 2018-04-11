@@ -45,7 +45,7 @@ nav {
 
 nav img {
 	height: 100%;
-	padding-left: 20px;
+	margin-left: 20px;
 	float: left;
 }
 
@@ -101,13 +101,6 @@ nav img {
 }
 
 /************************************************************/
-/*							Section							*/
-/************************************************************/
-
-section {
-}
-
-/************************************************************/
 /*							Footer							*/
 /************************************************************/
 
@@ -137,7 +130,7 @@ footer {
 .modal {
 	display: none;
 	position: fixed;
-	z-index: 1;
+	z-index: 100;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -511,4 +504,143 @@ hr {
 
 .doc__list li img {
 	height: 60px;
+}
+
+/************************************************************/
+/*					Page profil de Nico					*/
+/************************************************************/
+
+/***********************
+ *   GLOBAL SETTINGS   *
+ ***********************/
+
+
+form{
+	display:flex;
+	flex-flow: row wrap;
+}
+
+form label, form input{
+	margin:10px;
+	width: 300px;
+}
+
+fieldset{
+	border: 2px solid #679F0B;
+	border-radius: 10px;
+	margin: 10px 10px 40px 10px;
+}
+
+form legend{
+	font-weight: bold;
+}
+
+/***********************
+ *    GLOBAL LAYOUT    *
+ ***********************/
+
+.options__visibility{
+	width:100%;
+}
+
+.col__right{
+	width: 30%;
+}
+
+.col__left{
+	width:70%;
+	flex-grow: 1;
+}
+
+.techno__field{
+	width:auto;
+	display:flex;
+	flex-flow: row wrap;
+}
+
+
+/***********************
+ * SETTINGS VISIBILITY *
+ ***********************/
+
+.options__visibility input{
+	width: 50px;
+}
+
+/***********************
+ *   SOCIAL NETWORK    *
+ ***********************/
+.label__social{
+	display:block;
+	width: 150px;
+}
+
+
+/***********************
+ *    INFORMATIONS     *
+ ***********************/
+
+.civil__state {
+	width:auto;
+}
+
+form textarea{
+	margin:10px;
+	width: 60%;
+	height:150px;
+}
+
+
+/***********************
+ *      PICTURE       *
+ ***********************/
+.profil__picture img{
+	display:block;
+	margin:auto;
+	border-radius: 50%;
+	height:150px;
+}
+
+.profil__picture input{
+	display:block;
+	margin:auto;
+	width:80%;
+}
+
+/***********************
+ *    TECHNOLOGIES    *
+ ***********************/
+
+.techno__field label{
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+.techno__field input{
+	width:40%;
+}
+
+.label__techno{
+	display: inline-block;
+	width: 40%;
+	margin:0;
+	text-align: center;
+}
+
+.social__field label{
+}
+
+
+/***********************
+ *      DOCUMENT       *
+ ***********************/
+
+.doc__field{
+	width:auto;
+}
+
+.doc__field input{
+	width:80%;
+	margin:15px;
 }

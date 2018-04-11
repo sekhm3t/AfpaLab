@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+$_SESSION["login"] = "test";
+
 require "config.php";
 
 $headTitle = "Accueil AfpaLab";
