@@ -1,15 +1,12 @@
 <?php
 
-session_start();
+// List of classes needed for this program
+require_once "Class/RouteurView.php";
 
-require "config.php";
+// Instance of Routeur
+$obj_route= new RouteurView();
 
-$page = $_GET["page"];
+// Call Destructor of class Routeur
+unset($obj_route);
 
-if (is_file($page . ".php")) {
-	require $page . ".php";
-
-	require $aConfig["PATHS"]["PATH_HOME"] . $aConfig["PATHS"]["PATH_VIEW"] . "default_layout.html";
-} else {
-	header("Location: /index.php");
-}
+?>

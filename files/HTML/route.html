@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title><?= $headTitle ?></title>
+	<title><?= $obj_main->VARS_HTML["headTitle"] ?></title>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<!-- For Internet Explorer : to force css3 -->
@@ -25,8 +25,8 @@
 		<img src="/img/afpalab_logo_white.png" alt="Logo AfpaLab">
 		<span class="nav__txt">AfpaLab</span>
 		<div id="nav__div__links">
-			<a href="index.php"
-			   class="nav__link <?php if ($_SERVER["REQUEST_URI"] === "/index.php") : ?>nav__link--active<?php endif; ?>">Accueil</a>
+			<a href="route.php?page=accueil"
+			   class="nav__link <?php if ($_GET["page"] === "accueil") : ?>nav__link--active<?php endif; ?>">Accueil</a>
 			<a href="route.php?page=formations"
 			   class="nav__link <?php if ($_GET["page"] === "formations") : ?>nav__link--active<?php endif; ?>">Formations</a>
 			<a href="route.php?page=stagiaires"
@@ -50,7 +50,7 @@
 
 	<!-- Section -->
 	<section>
-		<?php require $aConfig["PATHS"]["PATH_HOME"] . $aConfig["PATHS"]["PATH_VIEW"] . $page . ".html" ?>
+		<?php include $obj_main->GLOBALS_INI['PATHS']['PATH_HOME'] . $obj_main->GLOBALS_INI['PATHS']['PATH_VIEW'] . $obj_main->VARS_HTML["page"] . ".html" ?>
 	</section>
 
 	<!-- Footer -->
@@ -95,7 +95,9 @@
 <!-- JQuery library -->
 <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 <!-- JS -->
-<script type="text/javascript" src="/js/default.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript" src="/js/carousel.js"></script>
+
 
 </body>
 

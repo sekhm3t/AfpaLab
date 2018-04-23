@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="0d461ce2-b12b-4856-b258-893f46dfc8d3" name="AfpaLab" url="http://192.168.0.200">
-        <fileTransfer host="192.168.0.200" port="22" rootFolder="/home/gael" accessType="SFTP">
+        <fileTransfer host="192.168.0.200" port="22" rootFolder="/home/site" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
