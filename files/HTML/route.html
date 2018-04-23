@@ -24,24 +24,26 @@
 		</div>
 		<img src="/img/afpalab_logo_white.png" alt="Logo AfpaLab">
 		<span class="nav__txt">AfpaLab</span>
-		<div id="nav__div__links">
-			<a href="route.php?page=accueil"
-			   class="nav__link <?php if ($_GET["page"] === "accueil") : ?>nav__link--active<?php endif; ?>">Accueil</a>
-			<a href="route.php?page=formations"
-			   class="nav__link <?php if ($_GET["page"] === "formations") : ?>nav__link--active<?php endif; ?>">Formations</a>
-			<a href="route.php?page=stagiaires"
-			   class="nav__link <?php if ($_GET["page"] === "stagiaires") : ?>nav__link--active<?php endif; ?>">Stagiaires</a>
-			<a href="route.php?page=ressources"
-			   class="nav__link <?php if ($_GET["page"] === "ressources") : ?>nav__link--active<?php endif; ?>">Ressources</a>
-			<?php if (isset($_SESSION["login"])) : ?>
+		<a href="route.php?page=accueil"
+		   class="nav__link <?php if ($_GET["page"] === "accueil") : ?>nav__link--active<?php endif; ?>">Accueil</a>
+		<a href="route.php?page=formations"
+		   class="nav__link <?php if ($_GET["page"] === "formations") : ?>nav__link--active<?php endif; ?>">Formations</a>
+		<a href="route.php?page=stagiaires"
+		   class="nav__link <?php if ($_GET["page"] === "stagiaires") : ?>nav__link--active<?php endif; ?>">Stagiaires</a>
+		<a href="route.php?page=ressources"
+		   class="nav__link <?php if ($_GET["page"] === "ressources") : ?>nav__link--active<?php endif; ?>">Ressources</a>
+		<?php if (isset($_SESSION["login"])) : ?>
 			<a href="route.php?page=profil"
 			   class="nav__link <?php if ($_GET["page"] === "profil") : ?>nav__link--active<?php endif; ?>">Profil</a>
-			<?php endif; ?>
-		</div>
+		<?php endif; ?>
+
 		<?php if (isset($_SESSION["login"])) : ?>
-			<span class="nav__login"><span class="nav__login__txt"><?= $_SESSION["login"] ?></span>&nbsp;&nbsp;&nbsp;<i class="fas fa-sign-out-alt"></i></span>
+			<span class="nav__login"><span class="nav__login__txt"><?= $_SESSION["login"] ?></span>&nbsp;&nbsp;&nbsp;<i
+						class="fas fa-sign-out-alt"></i></span>
 		<?php else : ?>
-			<span class="nav__login" onclick="open__login()"><i class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;<span class="nav__login__txt">Login</span></span>
+			<span class="nav__login" onclick="open__login()"><i
+						class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;<span
+						class="nav__login__txt">Login</span></span>
 		<?php endif; ?>
 	</nav>
 
@@ -96,7 +98,9 @@
 <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 <!-- JS -->
 <script type="text/javascript" src="/js/main.js"></script>
+<!-- Carousel -->
 <script type="text/javascript" src="/js/carousel.js"></script>
+<!-- Maps -->
 
 
 </body>

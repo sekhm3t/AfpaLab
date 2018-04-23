@@ -8,15 +8,8 @@
 		font-size: 1.6em;
 	}
 
-	/************************************************************/
-	/*					Page stagiaire de Nico					*/
-	/************************************************************/
-	.student__title {
-		font-size: 1.3em;
-	}
-
-	.student__website {
-		font-size: 0.8em;
+	.nav__txt, .nav__link, .nav__login {
+		line-height: 55px;
 	}
 
 }

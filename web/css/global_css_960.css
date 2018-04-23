@@ -8,4 +8,8 @@
 		font-size: 1.4em;
 	}
 
+	.nav__txt, .nav__link, .nav__login {
+		line-height: 50px;
+	}
+
 }
