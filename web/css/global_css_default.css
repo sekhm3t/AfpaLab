@@ -3,9 +3,10 @@
 /************************************************************/
 
 html {
-	font: 1em "AGENCYB";
+	font: 1rem "AGENCYB";
 	height: 100%;
 	width: 100%;
+	min-width: 320px;
 	margin: 0;
 	padding: 0;
 }
@@ -38,50 +39,51 @@ body {
 /************************************************************/
 
 nav {
-	font-size: 2em;
 	background: linear-gradient(#3d6b1f, #528e29, #66b033);
-	height: 62px;
-}
-
-nav img {
-	height: 100%;
-	margin-left: 20px;
-	float: left;
-	white-space: nowrap;
-}
-
-.nav__txt, .nav__link, .nav__login {
-	display: inline-block;
-	height: 100%;
-	line-height: 62px;
-	color: #ecf0f1;
-	text-decoration: none;
-	padding: 0px 12px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	height: 60px;
+	font-size: 1.8em;
 	vertical-align: middle;
 }
 
-.nav__txt {
-	float: left;
-	padding-left: 5px;
-	cursor: default;
+#nav__div__logo, #nav__div__links, #nav__div__login {
+	height: 100%;
+	display: inline-block;
 }
 
-.nav__link {
+#nav__div__logo img {
+	float: left;
+	height: 100%;
+}
+
+.nav__txt, .nav__link, .nav__login {
+	text-decoration: none;
+	display: inline-block;
+	color: #ecf0f1;
+	line-height: 60px;
+	padding: 0 12px;
+}
+
+#nav__div__logo, #nav__div__links {
 	float: left;
 }
 
-.nav__login {
+#nav__div__login {
 	float: right;
 }
 
 .nav__link:hover, .nav__login:hover, .nav__link--active {
-	cursor: pointer;
-	color: black;
 	background: linear-gradient(#66b033, #82cd51, #c1e6a8);
 }
 
 /*		Burger menu		*/
 #burger__container {
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
 	display: none;
 }
 
@@ -115,10 +117,12 @@ footer {
 	font-weight: bold;
 	height: 34px;
 	width: 100%;
+	min-width: 320px;
 	background: linear-gradient(#66b033, #528e29, #3d6b1f);
 	overflow: hidden;
 	position: fixed;
 	bottom: 0;
+	z-index: 100;
 }
 
 .footer__text {
@@ -278,19 +282,4 @@ footer {
 .btn__generic:active {
 	background: linear-gradient(#3d6b1f, #528e29, #66b033);
 	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-p {
-	font-size: 1.5em;
-	padding: 10px;
-	text-align: justify;
-	text-indent: 2em;
-}
-
-h3 {
-	color: #528e29;
-}
-
-hr {
-	display: none;
 }

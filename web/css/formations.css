@@ -4,6 +4,9 @@
  */
 /**************************************************/
 
+#formation__carousel__section {
+	margin-top: 2%;
+}
 
 .carousel {
     position: relative;

@@ -351,7 +351,7 @@ class Carousel {
  */
 document.addEventListener('DOMContentLoaded', function () {
 
-	new Carousel(document.querySelector('carousel'), {
+	new Carousel(document.querySelector('#formation__carousel__section'), {
 		slidesToScroll: 1,
 		slidesVisible: 1,
 		loop: false,

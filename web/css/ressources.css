@@ -1,30 +1,29 @@
-section
-{
-	flex-direction: column;
-}
-
-
-
 /*----------BLOCK----------*/
+
+.formulaire
+{
+	position: absolute;
+	top: 60px;
+}
 
 #noir
 {
 	width: 100%;
+	margin-top: 3%;
 }
 
-#vert
+.vert
 {
+    flex-wrap: wrap;
 	float: left;
-	display: inline-block;
-	width:20%;
-	height:25%;
+	width:280px;
 	border: 2px solid green;
 	border-radius: 10px;
 	box-shadow: 5px 5px 5px black;
-
+	margin: 6% 6% 6% 6%;
 }
 
-#jaune
+.jaune
 {
 	height:33%; 
 	display: flex;
@@ -33,25 +32,36 @@ section
 
 .image
 {
-	height: 40px;
+	width: 50%;
 }
 
-#titre
+.image img 
 {
-	width:50%;
+	width: 100%;
+	height: 100%;
+}
+
+.titre
+{
+	width:100%;
 	height:100%;
 }
-#violet
+
+.signal
 {
-	width:100%;
-	height:33%;
-	text-align: center; 
+	width:5%;
 }
 
-#orange
+.violet
 {
 	width:100%;
 	height:33%;
+}
+
+.orange
+{
+	width:100%;
+	height:100%;
 }
 
 
@@ -60,92 +70,51 @@ section
 
 /* ----------------------media query ------------------------*/
 
-@media screen and (min-width:1151px ) and (max-width:1439px ){
-	#vert
-{
-     margin-left: 17%
+@media screen and (min-width: 919px ) and (max-width:1330px ){
+	.vert
+	{
+		margin-left: 13%;
 	}
 }
-
-@media screen and (min-width:1024px ) and (max-width:1154px ){
-    
-    #vert
-	{
-		margin-left: 12%;
-	}
 	
-}
-@media screen and (min-width:802px ) and (max-width:1021px ){
-	#vert
-	{
-		margin-left: 12%;
 
+@media screen and (min-width:400px ) and (max-width: 745px ){
+	.vert
+	{
+		margin-left: 15%;
 	}
+    
+}
+@media screen and (min-width:338px ) and (max-width:400px ){
+	.vert
+	{
+		margin-left: 10%;
+	}
+
 }
 @media screen and (min-width:778px ) and (max-width:856px ){
-    #vert
-    {
-    	margin-left: 28%;          
-    }
+
 }
 
 
 
 @media only screen and (max-width: 1023px) {
-
-	section
-	{
-		flex-direction: column;
-		margin-top:5px;
-	}
-
-	.formulaire
-	{
-		width: 100%;
-		height:12%;
-
-	}
-   
-	#noir
-	{
-		margin-top:1%;
-		width: 100% ;
-		
-	}
 	
-
-	#jaune
-	{
-		height: 37%;
-	}
- 
 }
 @media screen and (min-width:489px ) and (max-width:778px ) {
 	
-	#vert
-	{
-		margin-left: 25%;
-	}
-	#noir
-	{
-		width: 100%;
-	}
 }
 
 @media screen and (min-width:349px ) and (max-width:489px ) {
 	
-	#vert
-	{
-	margin-left:15%;
-
-	}
-	#noir
-	{
-		width: 100%;
-	}
+	
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 950px) {
+	#noir
+	{
+		margin-top: unset;
+	}
 
 }
 
