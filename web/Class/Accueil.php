@@ -10,7 +10,8 @@ Class Accueil extends Initialize
 	public function __construct()
 	{
 		// SESSION
-		// session_start();
+		 session_start();
+		 $_SESSION["login"] = "Test membre";
 		// Call Parent Constructor
 		parent::__construct();
 

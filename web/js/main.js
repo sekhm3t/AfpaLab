@@ -19,6 +19,10 @@ function open__login() {
 	$("#modal__login").toggle();
 }
 
+function open__logout() {
+	$("#modal__logout").toggle();
+}
+
 // Open the contact modal
 function open__contact(user, key_user) {
 	$("#contact__recipient").html("Destinataire: " + user);
@@ -56,3 +60,18 @@ function in_array(val, array) {
 	}
 	return found;
 }
+
+
+/* Recherche ressources */
+
+$(function() {
+	$("body").on("change", "#input__select__techno--first", function() {
+		var divInfo = document.getElementById('add__input__select');
+		var inputSelect = document.getElementById('input__select__techno--first');
+		if (inputSelect.value !== "") {
+			divInfo.style.display = 'block';
+		} else {
+			divInfo.style.display = 'none';
+		}
+	})
+});

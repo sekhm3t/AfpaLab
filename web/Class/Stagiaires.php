@@ -10,7 +10,7 @@ Class Stagiaires extends Initialize
 	public function __construct()
 	{
 		// SESSION
-		// session_start();
+		 session_start();
 		// Call Parent Constructor
 		parent::__construct();
 
@@ -30,6 +30,7 @@ Class Stagiaires extends Initialize
 	{
 		$this->VARS_HTML["page"] = "stagiaires";
 		$this->VARS_HTML["headTitle"] = "Stagiaires";
+		$this->VARS_HTML["libJs"] = ["owl.carousel"];
 	} // end of private function main()
 }
 

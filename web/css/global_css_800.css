@@ -32,7 +32,7 @@
 	.nav__link:hover, .nav__link--active {
 		display: block;
 		color: black;
-		background: linear-gradient(#66b033, #c1e6a8, #66b033);
+		background: linear-gradient(#66b033, #c1e6a8, #c1e6a8, #66b033);
 	}
 
 	#burger__container {

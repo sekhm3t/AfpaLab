@@ -10,7 +10,7 @@ Class Ressources extends Initialize
 	public function __construct()
 	{
 		// SESSION
-		// session_start();
+		 session_start();
 		// Call Parent Constructor
 		parent::__construct();
 

@@ -24,7 +24,7 @@
 		</div>
 		<div id="nav__div__login">
 			<?php if (isset($_SESSION["login"])) : ?>
-				<span class="nav__login"><span class="nav__login__txt"><?= $_SESSION["login"] ?></span>&nbsp;&nbsp;&nbsp;<i
+				<span class="nav__login" onclick="open__logout()"><span class="nav__login__txt"><?= $_SESSION["login"] ?></span>&nbsp;&nbsp;&nbsp;<i
 							class="fas fa-sign-out-alt"></i></span>
 			<?php else : ?>
 				<span class="nav__login" onclick="open__login()">
@@ -79,6 +79,12 @@
 		</div>
 	</div>
 
+	<!-- Modal for logout -->
+	<div id="modal__logout" class="modal">
+		<div id="logout__container" class="modal__container animate">
+		</div>
+	</div>
+
 	<!-- Modal for contact -->
 	<div id="modal__contact" class="modal">
 		<div id="contact__container" class="modal__container animate">
@@ -93,7 +99,7 @@
 			<div id="contact__form__body">
 				<label for="contact__subject">Sujet: </label><br><input type="text" id="contact__subject"><br>
 				<label for="contact__message">Message:</label><br><textarea id="contact__message"></textarea><br>
-				<button id="contact__btn--send" class="btn__generic">Envoyer</button>
+				<button id="contact__btn--send" class="btn__generic" onclick="get_email_data()">Envoyer</button>
 			</div>
 		</div>
 	</div>
@@ -104,8 +110,6 @@
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <!-- JS -->
 <script type="text/javascript" src="js/main.js"></script>
-<!-- Carousel -->
-<script type="text/javascript" src="js/carousel.js"></script>
 <?php foreach ($obj_main->VARS_HTML["libJs"] as $jsFile) : ?>
 	<script type="text/javascript" src="js/<?= $jsFile ?>.js"></script>
 <?php endforeach; ?>

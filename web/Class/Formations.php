@@ -10,7 +10,7 @@ Class Formations extends Initialize
 	public function __construct()
 	{
 		// SESSION
-		// session_start();
+		 session_start();
 		// Call Parent Constructor
 		parent::__construct();
 
@@ -30,6 +30,7 @@ Class Formations extends Initialize
 	{
 		$this->VARS_HTML["page"] = "formations";
 		$this->VARS_HTML["headTitle"] = "Formations";
+		$this->VARS_HTML["libJs"] = ["carousel"];
 	} // end of private function main()
 }
 
