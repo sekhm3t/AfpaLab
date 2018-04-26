@@ -1,14 +1,21 @@
 <div class="select">
-	<select class="select__formation">
-		<option value="">Developpeur Logiciel</option>
-		<option value="">Concepteur Développeur Informatique</option>
+	<select id="liste__formation" class="select__formation" onchange="">
+		<option>Selectionner une formation...</option>
+		<?php
+			foreach($obj_main->result["liste_formation"] as $formation){
+			echo "<option value=\"".$formation["id_formation"]."\">".$formation["intitule_formation"]."</option>";
+			}
+		?>
+
 	</select>
-	<select class="select__session">
+	<select id="liste__session" class="select__session">
+		<option>Selectionner une session...</option>
+
 		<option value="">12/2017 - Web</option>
 		<option value="">XX/XXXX - Java</option>
 	</select>
 </div>
-
+ 
 <div class="owl-carousel owl-theme">
 	
 	<div class="slide__container">

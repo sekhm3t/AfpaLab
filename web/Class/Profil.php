@@ -28,8 +28,7 @@ Class Profil extends Initialize
 
 	private function main()
 	{
-		$this->VARS_HTML["page"] = "profil";
-		$this->VARS_HTML["headTitle"] = "Profil";
+		$this->result["headTitle"] = "Profil";
 	} // end of private function main()
 }
 

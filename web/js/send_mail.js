@@ -6,6 +6,7 @@ function get_email_data(){
 		subject: $("#contact__subject").val(),
 		content: $("#contact__message").val(),
 		id: "61",
+		bJSON: 1,
 		page: "MailManager"
 	}
 
@@ -21,13 +22,24 @@ function get_email_data(){
 
 	.done(function(result) 
 	{
-		alert("Ok");
+		if (result.error = 1) {
+			$("#contact__feedback").html(result.texte);
+			$("#contact__feedback").addClass("contact__feedback--return");
+		}else{
+			$("#contact__feedback").html(result.texte);
+			$("#contact__feedback").addClass("contact__feedback--return");
+		}
+		console.log(result);
+
 		
 	})
 
 	.fail(function(result)
 	{
-		console.log(result.responseText.texte);
-		alert("Fail !");
+	// 	PROBLEME AFFICHAGE MESSAGE ERREUR
+		$("#contact__feedback").html(result.texte);
+		$("#contact__feedback").addClass("contact__feedback--return");
+		
+		console.log(result["0"].texte);
 	});
 }

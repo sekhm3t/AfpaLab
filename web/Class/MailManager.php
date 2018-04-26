@@ -22,12 +22,11 @@ Class MailManager extends Initialize
 
 		// init variables result
 		$this->result = [];
-
 		$this->name = $this->VARS_HTML["name"];
 		$this->email_sender = $this->VARS_HTML["email_sender"];
 		$this->subject = $this->VARS_HTML["subject"];
 		$this->content = $this->VARS_HTML["content"];
-		$this->id_stagiaire = $this->VARS_HTML["id"];
+		$this->id_delivery = $this->VARS_HTML["id"];
 
 		// execute main function
 		$this->main();
@@ -41,6 +40,8 @@ Class MailManager extends Initialize
 	public function verifyEmail(){
 		if(preg_match( " /^.+@.+\.[a-zA-Z]{2,}$/ " , $this->email_sender)){
 			return true;
+		}else{
+			return false;
 		}
 	}
 	/**
@@ -48,16 +49,17 @@ Class MailManager extends Initialize
 	 * @return [string] [email adress]
 	 */
 	private function getDeliveryEmail() {
-		// Probleme pour récupérer GlobalIni
-		// $spathSQLSelect = Initialize()->GLOBALS_INI["PATH_HOME"] . Initialize()->GLOBALS_INI["PATH_MODEL"] . "select_delivery_email.sql";
-		$spathSQLSelect = "/home/site/files/sql/select_delivery_email.sql";
+		$spathSQLSelect = $this->GLOBALS_INI["PATHS"]["PATH_HOME"] . $this->GLOBALS_INI["PATHS"]["PATH_MODEL"] . "select_delivery_email.sql";
 	
-		$this->email_delivery = $this->obj_bdd->getSelectDatas(
+		$this->result["liste_emails"] = $this->obj_bdd->getSelectDatas(
 			$spathSQLSelect,
-			array('id' => $this->VARS_HTML['id']), 
+			array(
+				'id_utilisateur' => $this->id_delivery
+			), 
 			0
 		);
-		error_log($this->$email_delivery);
+		
+		$this->email_delivery= $this->result["liste_emails"][0]["courriel_utilisateur"];
 	}
 
 	/**
@@ -65,7 +67,6 @@ Class MailManager extends Initialize
 	 **/
 
 	public function sendEmail(){
-		$email_delivery = $resultat;
 
 		if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $this->email_sender)){
 			$new_line = "\r\n";
@@ -88,7 +89,7 @@ Class MailManager extends Initialize
 
 		//=====Header Creation.
 		$header = "From: \"".$this->name."\"<".$this->email_sender.">".$new_line;
-		$header.= "Reply-to: \"Admin\" <".$email_delivery.">".$new_line;
+		$header.= "Reply-to: \"Admin\" <".$this->email_delivery.">".$new_line;
 		$header.= "MIME-Version: 1.0".$new_line;
 		$header.= "Content-Type: multipart/alternative;".$new_line." boundary=\"$boundary\"".$new_line;
 		//==========
@@ -111,7 +112,7 @@ Class MailManager extends Initialize
 		//==========
 
 		//=====Send Email.
-		mail($email_delivery,$sujet,$message,$header);
+		mail($this->email_delivery,$sujet,$message,$header);
 	//==========
 	}
 
@@ -135,10 +136,10 @@ Class MailManager extends Initialize
 
 		 // If all fields are complete...
 		if(!empty($_POST)){
-			
+			error_log("verifyEmail = " . $this->verifyEmail() );
+
 			// Check for email error...
 			if($this->verifyEmail()===false){
-				
 				$result[0] = array(
 						'error' => 0, 
 						'texte' =>  "Adresse courriel invalide."	
@@ -153,20 +154,22 @@ Class MailManager extends Initialize
 					);
 
 			}else{
-		
-				$this->email_delivery = $this->getDeliveryEmail();
+
+				$this->getDeliveryEmail();
+
+				error_log("email_delivery = " . $this->email_delivery );
 		
 				if (!empty($this->email_delivery)) {
 					
 					$this->sendEmail();
-					$result[0] = array(
+					$result = array(
 						'error' => 0, 
 						'texte' => "Le message a bien été envoyé."
 					);
 				
 				}else{
-					$result[0] = array(
-						'error' => 0, 
+					$result = array(
+						'error' => 1,
 						'texte' =>  "Erreur lors de l'envoi du message."	
 					);
 					

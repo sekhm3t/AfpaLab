@@ -28,8 +28,7 @@ Class Ressources extends Initialize
 
 	private function main()
 	{
-		$this->VARS_HTML["page"] = "ressources";
-		$this->VARS_HTML["headTitle"] = "Ressources";
+		$this->result["headTitle"] = "Ressources";
 	} // end of private function main()
 }
 

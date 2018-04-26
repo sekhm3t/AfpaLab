@@ -28,9 +28,8 @@ Class Formations extends Initialize
 
 	private function main()
 	{
-		$this->VARS_HTML["page"] = "formations";
-		$this->VARS_HTML["headTitle"] = "Formations";
-		$this->VARS_HTML["libJs"] = ["carousel"];
+		$this->result["headTitle"] = "Formations";
+		$this->result["libJs"] = ["carousel"];
 	} // end of private function main()
 }
 

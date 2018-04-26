@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title><?= $obj_main->VARS_HTML["headTitle"] ?></title>
+	<title><?= $obj_main->result["headTitle"] ?></title>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<!-- For Internet Explorer : to force css3 -->
@@ -99,6 +99,7 @@
 			<div id="contact__form__body">
 				<label for="contact__subject">Sujet: </label><br><input type="text" id="contact__subject"><br>
 				<label for="contact__message">Message:</label><br><textarea id="contact__message"></textarea><br>
+				<span id="contact__feedback"></span>
 				<button id="contact__btn--send" class="btn__generic" onclick="get_email_data()">Envoyer</button>
 			</div>
 		</div>
@@ -110,8 +111,8 @@
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <!-- JS -->
 <script type="text/javascript" src="js/main.js"></script>
-<?php if (isset($obj_main->VARS_HTML["libJs"])) : ?>
-<?php foreach ($obj_main->VARS_HTML["libJs"] as $jsFile) : ?>
+<?php if (isset($obj_main->result["libJs"])) : ?>
+<?php foreach ($obj_main->result["libJs"] as $jsFile) : ?>
 	<script type="text/javascript" src="js/<?= $jsFile ?>.js"></script>
 <?php endforeach; ?>
 <?php endif; ?>

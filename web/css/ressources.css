@@ -1,32 +1,37 @@
 /*----------BLOCK----------*/
 
-.div__select__techno {
+.div__select__techno
+{
 	position: absolute;
 	top: 60px;
 	display: flex;
 	width: 95%;
-	height: 30px
+	height:30px
 }
 
-#input__select__techno--first {
+#input__select__techno--first
+{
 	margin-top: 10px;
 }
 
-#add__input__select {
+#add__input__select
+{
 	display: none;
 	width: 25px;
 	height: 25px;
 	margin-top: 2px;
-
+	cursor: pointer;
 }
 
-#add__list__titre {
-	display: flex;
+#add__list__titre
+{
 	width: fit-content;
+	display: none;
 }
 
-.add__list {
-	background-color: white;
+.add__list
+{
+	background-color:white;
 	border: 1px solid green;
 	border-radius: 10px;
 	height: 100%;
@@ -36,135 +41,160 @@
 	width: fit-content;
 }
 
-.add__list a {
+.add__list a
+{
 	display: inline-block;
 	margin: 5px;
 }
 
-.add__list i {
+.add__list i
+{
 	display: inline-block;
 	margin: 2px 5px;
 }
 
-.button__close {
-	cursor: pointer;
+.button__close
+{   cursor:pointer;
 	color: #528e29;
 	float: right;
 	position: relative;
 	z-index: 20;
 }
 
-.button__close:hover {
-	color: red;
+.button__close:hover
+{
+   color: red;
 }
 
-.box {
-	flex-wrap: wrap;
+.box
+{
+  flex-wrap: wrap;
 	float: left;
-	width: 280px;
+	width:280px;
 	border: 2px solid green;
 	border-radius: 10px;
 	box-shadow: 5px 5px 5px black;
 	margin: 40px 6% 6% 6%;
 }
 
-.box__presentation {
-	height: 33%;
+
+.box__presentation
+{
+	height:33%; 
 	display: flex;
 	border-bottom: 2px solid green;
 }
 
-.box__presentation__image {
+.box__presentation__image
+{
 	width: 50%;
 }
 
-.box__presentation__image img {
+.box__presentation__image img 
+{
 	width: 100%;
 	height: 100%;
 }
 
-.box__presentation__titre {
-	width: 100%;
-	height: 100%;
+.box__presentation__titre
+{
+	width:100%;
+	height:100%;
 	text-align: center;
 }
 
-.box__presentation__signal {
-	width: 7%;
+.box__presentation__signal
+{
+	width:7%;
 }
 
-.box__description {
-	width: 100%;
-	height: 33%;
+.box__description
+{
+	width:100%;
+	height:33%;
 	text-align: center;
 
 }
 
-.box__lien {
-	width: 100%;
-	height: 100%;
+.box__lien
+{
+	width:100%;
+	height:100%;
 }
+
+
+
+
 
 /* ----------------------media query ------------------------*/
-@media screen and (min-width: 1858px ) and (max-width: 2222px ) {
-	.box {
+@media screen and (min-width: 1858px ) and (max-width:2222px ){
+	.box
+	{
 		margin-left: 10%;
 	}
 
+
 }
 
-@media screen and (min-width: 919px ) and (max-width: 1373px ) {
-	.box {
+@media screen and (min-width: 919px ) and (max-width:1373px ){
+	.box
+	{
 		margin-left: 10%;
 	}
 
+
 }
 
-@media screen and (min-width: 657px ) and (max-width: 800px ) {
-	.box {
+@media screen and (min-width:657px ) and (max-width:800px ){
+	.box
+	{
 		margin-left: 30%;
 	}
-
+    
 }
 
-@media screen and (min-width: 389px ) and (max-width: 657px ) {
-	.box {
+@media screen and (min-width:389px ) and (max-width:657px ){
+	.box
+	{
 		margin-left: 12%;
-	}
+	}	
+		
+}
+
+@media screen and (min-width:778px ) and (max-width:856px ){
 
 }
 
-@media screen and (min-width: 778px ) and (max-width: 856px ) {
 
-}
 
 @media only screen and (max-width: 656px) {
-	/*.box {*/
-		/*margin-top: 10px*/
-	/*}*/
+	.box
+	{
+		margin-top: 10px
+	}	
+}
+@media screen and (min-width:489px ) and (max-width:778px ) {
+	
 }
 
-@media screen and (min-width: 489px ) and (max-width: 778px ) {
-
-}
-
-@media screen and (min-width: 349px ) and (max-width: 489px ) {
-
+@media screen and (min-width:349px ) and (max-width:489px ) {
+	
+	
 }
 
 @media only screen and (max-width: 950px) {
-
+	
 }
 
 @media only screen and (max-width: 589px) {
-
+	
 }
 
-@media screen and (min-width: 320px ) and (max-width: 834px ) {
-
+@media screen and (min-width:320px ) and (max-width:834px ) {
+   
 }
-
 @media only screen and (max-width: 813px) {
+
 
 }
 
@@ -182,10 +212,13 @@
 }
 
 /* IE10+ CSS */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)	{
 }
 
-/* IE Edge 12+ CSS */
+/* IE Edge 12+ CSS */ 
 @supports (-ms-accelerator:true) {
 }
+
+
+
 

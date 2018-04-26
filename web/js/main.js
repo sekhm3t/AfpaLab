@@ -61,6 +61,11 @@ function in_array(val, array) {
 /*			         Recherche ressources					*/
 /************************************************************/
 
+function supprRessource(ressource)	{
+	document.getElementById("div_encadre_"+ressource).remove();
+	document.getElementById("datalist__select__techno--first").innerHTML+= "<option value=\"" + ressource + "\" id=\"" + ressource + "\">"
+}
+
 //button input
 $(function() {
 	$("body").on("change", "#input__select__techno--first", function() {
@@ -73,6 +78,25 @@ $(function() {
 		}
 	})
 });
-function fermefenetre() {
-	window.close()
-}
+
+$(function() {
+	$("body").on("click", "#add__input__select", function()  {
+		var i= 0;
+		var bTrouve= 0;
+		for (i=0; i<document.getElementById("datalist__select__techno--first").options.length; i++)	{
+			if (document.getElementById("datalist__select__techno--first").options[i].value == document.getElementById("input__select__techno--first").value) {
+				bTrouve= 1;
+			}
+		}
+		if (bTrouve == 1)	{
+			document.getElementById("add__list__titre").innerHTML+= "<div class=\"add__list\" id=\"div_encadre_" + document.getElementById("input__select__techno--first").value + "\"><a>" + document.getElementById("input__select__techno--first").value + "<i class=\"button__close fas fa-times\" type=\"button\" onClick=\"supprRessource('" + document.getElementById("input__select__techno--first").value + "')\"></i></a></div>";
+			document.getElementById('add__list__titre').style.display = 'flex';
+			document.getElementById(document.getElementById("input__select__techno--first").value).remove();
+			document.getElementById("input__select__techno--first").value= "";
+		}
+	})
+
+});
+
+
+
