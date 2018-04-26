@@ -2,16 +2,14 @@
 // List of classes needed for this class
 require_once "Initialize.php";
 
-Class Accueil extends Initialize
+class ForgotPassword extends Initialize
 {
-
 	public $result;
 
 	public function __construct()
 	{
 		// SESSION
-		 session_start();
-		 $_SESSION["login"] = "Test membre";
+		session_start();
 		// Call Parent Constructor
 		parent::__construct();
 
@@ -29,8 +27,6 @@ Class Accueil extends Initialize
 
 	private function main()
 	{
-		$this->result["headTitle"] = "Accueil AfpaLab";
+		$this->result["headTitle"] = "Mot de passe oublié";
 	} // end of private function main()
 }
-
-?>
