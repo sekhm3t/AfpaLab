@@ -19,10 +19,6 @@ function open__login() {
 	$("#modal__login").toggle();
 }
 
-function open__logout() {
-	$("#modal__logout").toggle();
-}
-
 // Open the contact modal
 function open__contact(user, key_user) {
 	$("#contact__recipient").html("Destinataire: " + user);
@@ -61,9 +57,11 @@ function in_array(val, array) {
 	return found;
 }
 
+/************************************************************/
+/*			         Recherche ressources					*/
+/************************************************************/
 
-/* Recherche ressources */
-
+//button input
 $(function() {
 	$("body").on("change", "#input__select__techno--first", function() {
 		var divInfo = document.getElementById('add__input__select');
@@ -75,3 +73,6 @@ $(function() {
 		}
 	})
 });
+function fermefenetre() {
+	window.close()
+}

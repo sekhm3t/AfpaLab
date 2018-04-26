@@ -30,7 +30,8 @@ Class Stagiaires extends Initialize
 	{
 		$this->VARS_HTML["page"] = "stagiaires";
 		$this->VARS_HTML["headTitle"] = "Stagiaires";
-		$this->VARS_HTML["libJs"] = ["owl.carousel"];
+		$this->VARS_HTML["libJs"][0] = "owl.carousel";
+		$this->VARS_HTML["libJs"][1] = "send_mail";
 	} // end of private function main()
 }
 

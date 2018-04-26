@@ -1,10 +1,10 @@
 /*************************/
-/**    PAGINATION       **/
+/**     CAROUSEL        **/
 /*************************/
 
 .owl-carousel{
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	margin-right: auto;
 	margin-left: auto;
 	width:30%;
@@ -14,27 +14,38 @@
 	width:100%;
 	font-size: 3em;
 	position:absolute;
-
 }
 
 .owl-prev{
 	position: fixed;
 	top:50%;
 	left:10px;	
-	color: #528e29;
-
+	color: #528e29!important;
 }
 
 .owl-next{
 	position: fixed;
 	top:50%;
-	right:22px;
-	background: #528e29;
-
+	right:10px;
+	color: #528e29!important;
 }
 
+.owl-dots{
+	margin:20px;
+}
 
+.owl-dots > button > span{
+	width: 60px;	
+}
 
+/*************************/
+/**        SELECT       **/
+/*************************/
+.select{
+	display:block;
+	margin: 0 auto;
+	width: fit-content;
+}
 
 /*************************/
 /**    BACKGROUND       **/
@@ -53,8 +64,8 @@
 /**ANIMATION BUTTON HOVER**/
 /**************************/
 
-.social__icons, .options__contact, .options__report, .student__website{
-	animation-duration: 0.5s;
+.social__icons, .options__contact img, .options__report img, .student__website{
+	transition-duration: 0.5s;
 }
 
 .social__icons:hover, .options__contact img:hover, .options__report img:hover, .student__website:hover{
@@ -71,6 +82,7 @@
 	width:100%;
 	border: 1px solid black;
 	border-radius: 5px;
+	box-shadow: 5px 5px 10px grey;
 }
 
 .slide__header{
@@ -182,8 +194,14 @@
 	margin:10px;
 }
 
+.techno__list li{
+	display:flex;
+}
+
 .techno__img, .doc__img{
-	height:50px;
+	display:block;
+	width:30px;
+	margin:auto;
 }
 	
 .slide__main p{
@@ -194,6 +212,8 @@
 
 .doc__list h3{
 	margin:5px;
+	word-break: break-all;
+	font-size: 1em;
 }
 
 

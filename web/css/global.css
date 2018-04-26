@@ -53,11 +53,6 @@ nav {
 	display: inline-block;
 }
 
-#nav__div__logo img {
-	float: left;
-	height: 100%;
-}
-
 .nav__txt, .nav__link, .nav__login {
 	text-decoration: none;
 	display: inline-block;
@@ -76,6 +71,17 @@ nav {
 
 .nav__link:hover, .nav__login:hover, .nav__link--active {
 	background: linear-gradient(#66b033, #82cd51, #c1e6a8);
+}
+
+#nav__div__logo img {
+	float: left;
+	height: 100%;
+	margin: 0 5px;
+}
+
+#nav__logo__txt {
+	cursor: default;
+	padding: 0 12px 0 0;
 }
 
 /*		Burger menu		*/
@@ -99,7 +105,9 @@ nav {
 	transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.change #burger__bar2 {opacity: 0;}
+.change #burger__bar2 {
+	opacity: 0;
+}
 
 .change #burger__bar3 {
 	-webkit-transform: rotate(45deg) translate(-8px, -8px);
@@ -291,4 +299,98 @@ footer {
 .btn__generic:active {
 	background: linear-gradient(#3d6b1f, #528e29, #66b033);
 	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+@media only screen and (max-width: 1024px) {
+
+	/************************************************************/
+	/*								Nav							*/
+	/************************************************************/
+	nav {
+		height: 55px;
+		font-size: 1.6em;
+	}
+
+	.nav__txt, .nav__link, .nav__login {
+		line-height: 55px;
+	}
+
+}
+
+@media only screen and (max-width: 960px) {
+
+	/************************************************************/
+	/*								Nav							*/
+	/************************************************************/
+	nav {
+		height: 50px;
+		font-size: 1.4em;
+	}
+
+	.nav__txt, .nav__link, .nav__login {
+		line-height: 50px;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+	/************************************************************/
+	/*								Nav							*/
+	/************************************************************/
+	#nav__div__logo {
+		float: none;
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+
+	#nav__div__logo img {
+		float: none;
+		display: inline;
+	}
+
+	#nav__div__links, .nav__txt {
+		display: none;
+	}
+
+	#nav__div__links {
+		float: left;
+	}
+
+	.nav__link {
+		display: block;
+		color: black;
+		background: #66b033;
+	}
+
+	.nav__link:hover, .nav__link--active {
+		display: block;
+		color: black;
+		background: linear-gradient(#66b033, #c1e6a8, #c1e6a8, #66b033);
+	}
+
+	#burger__container {
+		display: block;
+	}
+
+	/************************************************************/
+	/*							Modals							*/
+	/************************************************************/
+	.modal {
+		padding-top: 20px;
+	}
+
+	.modal__container {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 380px) {
+}
+
+@media only screen and (max-width: 320px) {
 }

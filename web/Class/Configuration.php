@@ -1,7 +1,8 @@
 <?php 
 Class Configuration	{
 	public function getGlobalsINI() {
-		$DOCUMENT_ROOT= $_SERVER{'DOCUMENT_ROOT'};
+//		$DOCUMENT_ROOT= $_SERVER{'DOCUMENT_ROOT'};
+		$DOCUMENT_ROOT= "/home/site/web/";
 		$aOfPaths= explode("/", $DOCUMENT_ROOT);
 		for ($i=count($aOfPaths)-1; $i>0; $i--)	{
 			$DOCUMENT_ROOT= str_replace($aOfPaths[$i], "", $DOCUMENT_ROOT);

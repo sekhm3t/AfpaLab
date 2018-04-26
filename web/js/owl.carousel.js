@@ -3448,7 +3448,7 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-	$(document).ready(function(){
+	$(document).ready(function(){ 
 		$(".owl-carousel").owlCarousel();
 	});
 	

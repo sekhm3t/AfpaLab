@@ -1,13 +1,9 @@
 @import url(fonts&webkit.css);
-@import url(global_css_default.css);
-@import url(global_css_1024.css);
-@import url(global_css_960.css);
-@import url(global_css_800.css);
-@import url(global_css_600.css);
-@import url(global_css_380.css);
-@import url(global_css_320.css);
+@import url(global.css);
 @import url(formations.css);
-@import url(ressources.css);
 @import url(stagiaires.css);
+@import url(ressources.css);
 @import url(owl.theme.default.min.css);
 @import url(owl.carousel.min.css);
+@import url(profil.css);
+

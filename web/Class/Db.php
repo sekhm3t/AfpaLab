@@ -53,6 +53,7 @@ Class Db	{
 			}
 			$resultat[]= $new_ligne;
 		}
+
 		return $resultat;
 	}
 

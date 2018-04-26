@@ -1,158 +1,159 @@
-<fieldset>
-	<legend>EDITER LE PROFIL</legend>
-
+<fieldset class="profil__info">
+	<legend>INFORMATIONS</legend>
 	<form action="">
 
-		<fieldset class="options__visibility">
-			<legend>VISIBILITE</legend>
-			<input type="radio" name="visibility_profil" value="no">Je ne souhaite pas que mes informations soient affichées sur le profil.<br>
-			<input type="radio" name="visibility_profil" value="yes">Je souhaite que mes informations soient affichées sur le profil.<br>
-		</fieldset>
-
-		<div class="col__left">
-
-			<fieldset class="civil__state">
-
-				<legend>INFORMATIONS</legend>
-
-				<label>Nom :<br>
-					<input type="text" name="last_name" placeholder="Veuillez saisir votre nom..."><br>
-				</label>
-
-				<label>Prenom :<br>
-					<input type="text" name="first_name" placeholder="Veuillez saisir votre prénom..."><br>
-				</label>
-
-				<label>Site internet : <br>
-					<input type="url" name="url_site" placeholder="Veuillez saisir l'adresse de votre site internet"><br>
-				</label>
-
-				<label>Description (longueur max 250)<br>
-					<textarea name="description" placeholder="Description libre...Racontez vos projets professionnels et/ou personnels."></textarea>
-				</label>
-
-			</fieldset>
-
-			<fieldset class="password__manager">
-
-				<legend>MOT DE PASSE</legend>
-
-				<label>Nouveau mot de passe<br>
-					<input type="password"  name="new_password" placeholder="Veuillez saisir le nouveau mot de passe">
-				</label><br>
-
-				<label>Confirmer le nouveau mot de passe<br>
-					<input type="password" name="confirm_password" placeholder="Veuillez confirmer le nouveau mot de passe">
-				</label>
-
-			</fieldset>
-
-			<fieldset class="email__manager">
-
-				<legend>COURRIEL</legend>
-
-				<label>Nouvelle adresse courriel<br>
-					<input type="email" name="new_email" placeholder="Veuillez saisir la nouvelle adresse courriel"></label><br>
-
-				<label>Confirmer la nouvelle adresse<br>
-					<input type="email" name="confirm_email" placeholder="Veuillez confirmer la nouvelle adresse"></label><br>
-
-			</fieldset>
-
-			<fieldset class="social__field">
-
-				<legend>RESEAUX SOCIAUX</legend>
-
-				<label>
-					<svg xmlns="http://www.w3.org/2000/svg" fill="#679F0B" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg>
-					<input type="text">
-				</label><br>
-
-				<label>
-					<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z"/></svg>
-					<input type="text">
-				</label><br>
-
-				<label>
-					<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-					<input type="text">
-				</label><br>
-
-				<label>
-					<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
-					<input type="text">
-				</label><br>
-
-				<label>
-					<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.279 13.52h-.939v5.027h-.908v-5.027h-.94v-.854h2.788v.854zm5.395 1.721v2.406c0 .537-.2.954-.736.954-.296 0-.541-.108-.767-.388v.333h-.813v-5.88h.813v1.893c.183-.222.429-.405.718-.405.59 0 .785.499.785 1.087zm-.83.049c0-.146-.027-.257-.086-.333-.098-.129-.279-.143-.42-.071l-.167.132v2.703l.19.153c.132.066.324.071.413-.045.046-.061.069-.161.069-.299v-2.24zm-2.347-5.859c.229 0 .354-.183.354-.431v-2.119c0-.255-.111-.434-.371-.434-.237 0-.353.185-.353.434v2.119c.001.24.137.431.37.431zm-.733 8.07c-.099.123-.317.325-.475.325-.172 0-.215-.118-.215-.292v-3.325h-.805v3.626c0 .88.597.885 1.031.636.16-.092.315-.227.464-.403v.479h.807v-4.338h-.807v3.292zm13.236-12.501v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-10.566 4.427c0 .45.137.813.592.813.256 0 .611-.133.979-.569v.503h.847v-4.554h-.847v3.457c-.104.129-.333.341-.498.341-.182 0-.226-.124-.226-.307v-3.491h-.847v3.807zm-3.177-2.621v2.233c0 .803.419 1.22 1.24 1.22.682 0 1.218-.456 1.218-1.22v-2.233c0-.713-.531-1.224-1.218-1.224-.745 0-1.24.493-1.24 1.224zm-3.155-2.806l1.135 3.67v2.504h.953v-2.504l1.11-3.67h-.969l-.611 2.468-.658-2.468h-.96zm11.564 11.667c-.014-2.978-.232-4.116-2.111-4.245-1.734-.118-7.377-.118-9.109 0-1.876.128-2.098 1.262-2.111 4.245.014 2.978.233 4.117 2.111 4.245 1.732.118 7.375.118 9.109 0 1.877-.129 2.097-1.262 2.111-4.245zm-1.011-.292v1.104h-1.542v.818c0 .325.027.607.352.607.34 0 .36-.229.36-.607v-.301h.83v.326c0 .836-.358 1.342-1.208 1.342-.771 0-1.164-.561-1.164-1.342v-1.947c0-.753.497-1.275 1.225-1.275.773-.001 1.147.491 1.147 1.275zm-.83-.008c0-.293-.062-.508-.353-.508-.299 0-.359.21-.359.508v.439h.712v-.439z"/></svg>
-					<input type="text">
-
-				</label> <br>
-
-			</fieldset>
-
+		<div class="options__visibility">
+			<p class="visibility__txt"><input type="radio" name="visibility_profil" class="visibility__btn" value="no">
+				Je ne souhaite pas que mes informations soient affichées sur le profil.</p><br>
+			<p class="visibility__txt"><input type="radio" name="visibility_profil" class="visibility__btn" value="yes">
+				Je souhaite que mes informations soient affichées sur le profil.</p><br>
 		</div>
 
-		<div class="col__right">
+		<div class="profil__picture">
 
-			<fieldset class="profil__picture">
-
-				<legend>PHOTO</legend>
-
-				<label>
-					<img src="http://milrecursos.com/wp-content/uploads/2011/11/6-Avatares-para-Facebook-muy-originales-y-divertidos-avatares-redes-sociales-blancos.jpg" alt="">
-					<input type="file" name="profil_photo" accept="image/*"><br>
-				</label>
-
-			</fieldset>
-
-			<fieldset class="doc__field">
-
-				<legend>DOCUMENTS</legend>
-
-				<input type="file" name="document"><br>
-				<input type="file" name="document"><br>
-				<input type="file" name="document"><br>
-				<input type="file" name="document"><br>
-
-			</fieldset>
-
-			<fieldset class="techno__field">
-
-				<legend>TECHNOLOGIES</legend>
-
-				<label><span class="label__techno">CSS3</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">Javascript</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">JQuery</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">PHP</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">SQL</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">JAVA</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">PYTHON</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">C</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">Objective-C</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">C#</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">Ruby</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">HTML5</span><input type="checkbox"> </label>
-
-				<label><span class="label__techno">Perl</span><input type="checkbox"> </label>
-
-			</fieldset>
-
+			<label class="label__generic">
+				<img src="http://milrecursos.com/wp-content/uploads/2011/11/6-Avatares-para-Facebook-muy-originales-y-divertidos-avatares-redes-sociales-blancos.jpg"
+				     alt="">
+				<input type="file" name="profil_photo" accept="image/*"><br>
+			</label>
 		</div>
+		<div class="civil__state">
+			<label class="label__generic">Nom</label><br>
+			<input type="text" class="input__txt" name="last_name" placeholder="Veuillez saisir votre nom..."><br>
 
-		<input class="btn__generic" type="submit" value="Mettre à jour le profil">
 
+			<label class="label__generic">Prenom</label><br>
+			<input type="text" class="input__txt" name="first_name" placeholder="Veuillez saisir votre prénom..."><br>
+
+
+			<label class="label__generic">Site internet</label> <br>
+			<input type="url" class="input__txt" name="url_site"
+			       placeholder="Veuillez saisir l'adresse de votre site internet"><br>
+
+
+			<label class="label__generic">Description (longueur max 250)</label><br>
+			<textarea class="profil__description" name="description"
+			          placeholder="Description libre...Racontez vos projets professionnels et/ou personnels."></textarea>
+
+			<input type="submit" class="btn__generic" name="" value="Valider">
 	</form>
+</fieldset>
+
+</div>
+<fieldset class="password__manager">
+
+	<legend class="title__field">MOT DE PASSE</legend>
+
+	<label class="label__generic">Nouveau mot de passe</label><br>
+	<input type="password" class="input__txt" name="new_password" placeholder="Veuillez saisir le nouveau mot de passe">
+	<br>
+	<label class="label__generic">Confirmer le nouveau mot de passe</label><br>
+	<input type="password" class="input__txt" name="confirm_password"
+	       placeholder="Veuillez confirmer le nouveau mot de passe">
+	<br>
+	<input type="submit" class="btn__generic" name="">
+</fieldset>
+
+<fieldset class="email__manager">
+
+	<legend class="title__field">COURRIEL</legend>
+
+	<label class="label__generic">Nouvelle adresse courriel</label><br>
+	<input type="email" class="input__txt" name="new_email"
+	       placeholder="Veuillez saisir la nouvelle adresse courriel"><br>
+
+	<label class="label__generic">Confirmer la nouvelle adresse</label><br>
+	<input type="email" class="input__txt" name="confirm_email"
+	       placeholder="Veuillez confirmer la nouvelle adresse"><br>
+	<input type="submit" class="btn__generic" name="">
+</fieldset>
+
+
+<fieldset class="doc__field">
+
+	<legend class="title__field">DOCUMENTS</legend>
+
+	<input type="file" class="input__txt" name="document"><br>
+	<input type="file" class="input__txt" name="document"><br>
+	<input type="file" class="input__txt" name="document"><br>
+	<input type="file" class="input__txt" name="document"><br>
+	<input type="file" class="input__txt" name="document"><br>
+
+</fieldset>
+
+
+<fieldset class="social__field">
+
+	<legend class="title__field">RESEAUX SOCIAUX</legend>
+
+	<label>
+		<svg xmlns="http://www.w3.org/2000/svg" fill="#679F0B" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/>
+		</svg>
+		<input type="text" class="input__txt">
+	</label><br>
+
+	<label>
+		<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z"/>
+		</svg>
+		<input type="text" class="input__txt">
+	</label><br>
+
+	<label>
+		<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+		</svg>
+		<input type="text" class="input__txt">
+	</label><br>
+	<label>
+		<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/>
+		</svg>
+		<input type="text" class="input__txt">
+	</label><br>
+
+	<label>
+		<svg fill="#679F0B" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M9.279 13.52h-.939v5.027h-.908v-5.027h-.94v-.854h2.788v.854zm5.395 1.721v2.406c0 .537-.2.954-.736.954-.296 0-.541-.108-.767-.388v.333h-.813v-5.88h.813v1.893c.183-.222.429-.405.718-.405.59 0 .785.499.785 1.087zm-.83.049c0-.146-.027-.257-.086-.333-.098-.129-.279-.143-.42-.071l-.167.132v2.703l.19.153c.132.066.324.071.413-.045.046-.061.069-.161.069-.299v-2.24zm-2.347-5.859c.229 0 .354-.183.354-.431v-2.119c0-.255-.111-.434-.371-.434-.237 0-.353.185-.353.434v2.119c.001.24.137.431.37.431zm-.733 8.07c-.099.123-.317.325-.475.325-.172 0-.215-.118-.215-.292v-3.325h-.805v3.626c0 .88.597.885 1.031.636.16-.092.315-.227.464-.403v.479h.807v-4.338h-.807v3.292zm13.236-12.501v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-10.566 4.427c0 .45.137.813.592.813.256 0 .611-.133.979-.569v.503h.847v-4.554h-.847v3.457c-.104.129-.333.341-.498.341-.182 0-.226-.124-.226-.307v-3.491h-.847v3.807zm-3.177-2.621v2.233c0 .803.419 1.22 1.24 1.22.682 0 1.218-.456 1.218-1.22v-2.233c0-.713-.531-1.224-1.218-1.224-.745 0-1.24.493-1.24 1.224zm-3.155-2.806l1.135 3.67v2.504h.953v-2.504l1.11-3.67h-.969l-.611 2.468-.658-2.468h-.96zm11.564 11.667c-.014-2.978-.232-4.116-2.111-4.245-1.734-.118-7.377-.118-9.109 0-1.876.128-2.098 1.262-2.111 4.245.014 2.978.233 4.117 2.111 4.245 1.732.118 7.375.118 9.109 0 1.877-.129 2.097-1.262 2.111-4.245zm-1.011-.292v1.104h-1.542v.818c0 .325.027.607.352.607.34 0 .36-.229.36-.607v-.301h.83v.326c0 .836-.358 1.342-1.208 1.342-.771 0-1.164-.561-1.164-1.342v-1.947c0-.753.497-1.275 1.225-1.275.773-.001 1.147.491 1.147 1.275zm-.83-.008c0-.293-.062-.508-.353-.508-.299 0-.359.21-.359.508v.439h.712v-.439z"/>
+		</svg>
+		<input type="text" class="input__txt">
+	</label> <br>
+</fieldset>
+
+<div class="col__right">
+
+	<fieldset class="techno__field">
+
+		<legend class="title__field">TECHNOLOGIES</legend>
+
+		<label class="label__generic"><img src="img/icons_techno/html5.png" class="icons__techno"/><input type="checkbox">
+		</label>
+
+		<label class="label__generic"><img src="img/icons_techno/css3.png" class="icons__techno"/><input type="checkbox">
+		</label>
+
+		<label class="label__generic"><img src="img/icons_techno/javascript.png" class="icons__techno"/><input type="checkbox">
+		</label>
+
+		<label class="label__generic"><img src="img/icons_techno/mysql.png" class="icons__techno"/><input type="checkbox">
+		</label>
+
+		<label class="label__generic"><img src="img/icons_techno/ruby.png" class="icons__techno"/><input type="checkbox">
+		</label>
+
+		<label class="label__generic"><img src="img/icons_techno/C++.png" class="icons__techno"/><input type="checkbox">
+		</label>
+
+		<label class="label__generic"><img src="img/icons_techno/r.png" class="icons__techno"/><input type="checkbox">
+		</label>
+
+		<label class="label__generic"><img src="img/icons_techno/python.png" class="icons__techno"/><input type="checkbox">
+		</label>
+	</fieldset>
+
+</div>
+<input class="btn__generic" type="submit" value="Mettre à jour le profil">
+
 
 </fieldset>

@@ -1,0 +1,1 @@
+SELECT courriel_utilisateur FROM utilisateur WHERE id_utilisateur = 61

@@ -122,6 +122,14 @@
  */
 /**************************************************/
 
+.carousel h3, .carousel p {
+	margin: 0;
+	padding: 0;
+	-webkit-margin-before: inherit;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
 
 /****************************/
 /* ITEM__LAYOUT
