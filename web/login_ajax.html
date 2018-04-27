@@ -1,0 +1,25 @@
+<script>
+$('#login__form').on ("submit",function(){
+
+                var mail = $("#mail").val();
+                alert(mail)
+                var password = $("#password").val();
+                alert(password)
+
+
+                $.ajax({
+                    url: 'route.php',
+                    data: 'mail='+mail+'&password='+password+',
+                    type: 'POST',
+                    success: function(response){
+                        if(response.status != 'success')                            
+                        revertFunc()                   
+                    },
+                    error: function(e){                    
+                        revertFunc();
+                        alert('Error processing your request: '+e.responseText);
+                    }
+                });
+                alert('OK')
+            });
+</script>
