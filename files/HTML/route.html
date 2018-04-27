@@ -22,17 +22,21 @@
 			<div id="burger__bar2"></div>
 			<div id="burger__bar3"></div>
 		</div>
-		<div id="nav__div__login">
+		<div id="nav__div__log">
 			<?php if (isset($_SESSION["login"])) : ?>
-				<span class="nav__login" onclick="open__logout()"><span
-							class="nav__login__txt"><?= $_SESSION["login"] ?></span>&nbsp;&nbsp;&nbsp;<i
-							class="fas fa-sign-out-alt"></i></span>
+				<span class="nav__log">
+                    <span id="nav__login__txt" class="nav__txt"><?= $_SESSION["login"] ?></span>&nbsp;&nbsp;&nbsp;<i class="fas fa-sign-out-alt"></i>
+                </span>
+				<div id="nav__logout">
+					<a href="deconnexion.php">Se deconnecter</a>
+				</div>
 			<?php else : ?>
-				<span class="nav__login" onclick="open__login()">
+				<span id class="nav__log" onclick="open__login()">
 				<i class="fas fa-user-circle"></i>
 				<span id="nav__login__txt" class="nav__txt">Login</span>
 			</span>
-			<?php endif; ?>        </div>
+			<?php endif; ?>
+		</div>
 		<div id="nav__div__logo">
 			<img src="img/afpalab_logo_white.png" alt="Logo AfpaLab">
 			<span id="nav__logo__txt" class="nav__txt">AfpaLab</span>
@@ -100,6 +104,7 @@
 				<label for="contact__subject">Sujet: </label><br><input type="text" id="contact__subject"><br>
 				<label for="contact__message">Message:</label><br><textarea id="contact__message"></textarea><br>
 				<span id="contact__feedback"></span>
+				<input type="hidden" id="contact__key" value="">
 				<button id="contact__btn--send" class="btn__generic" onclick="get_email_data()">Envoyer</button>
 			</div>
 		</div>

@@ -22,6 +22,7 @@ function open__login() {
 // Open the contact modal
 function open__contact(user, key_user) {
 	$("#contact__recipient").html("Destinataire: " + user);
+	$("#contact__key").val(key_user);	
 	$("#modal__contact").toggle();
 }
 

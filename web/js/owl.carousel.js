@@ -3447,33 +3447,3 @@
 	}
 
 })(window.Zepto || window.jQuery, window, document);
-
-	$(document).ready(function(){ 
-		$(".owl-carousel").owlCarousel();
-	});
-	
-	$('.owl-carousel').owlCarousel({
-		loop:false,
-		responsiveClass:true,
-		items:1,
-		nav: true,
-		rewind: true,
-		dots: true,
-		pagination: true,
-		margin: 30,
-		stagePadding: 30,
-		smartSpeed: 1000,
-
-		responsive:{
-			600 : {
-				margin: 100,
-		
-			},
-			800 : {
-				margin: 250,
-				stagePadding: 200,
-
-			}
-		},
-
-	});

@@ -11,7 +11,6 @@ Class Accueil extends Initialize
 	{
 		// SESSION
 		 session_start();
-		 $_SESSION["login"] = "Test membre";
 		// Call Parent Constructor
 		parent::__construct();
 

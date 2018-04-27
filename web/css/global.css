@@ -48,12 +48,12 @@ nav {
 	vertical-align: middle;
 }
 
-#nav__div__logo, #nav__div__links, #nav__div__login {
+#nav__div__logo, #nav__div__links, #nav__div__log {
 	height: 100%;
 	display: inline-block;
 }
 
-.nav__txt, .nav__link, .nav__login {
+.nav__txt, .nav__link, .nav__log {
 	text-decoration: none;
 	display: inline-block;
 	color: #ecf0f1;
@@ -65,11 +65,32 @@ nav {
 	float: left;
 }
 
-#nav__div__login {
+#nav__div__log {
 	float: right;
 }
 
-.nav__link:hover, .nav__login:hover, .nav__link--active {
+#nav__logout {
+	display: none;
+	text-align: center;
+	text-decoration: underline;
+	background-color: #66b033;
+	color: #ecf0f1;
+}
+
+#nav__logout:hover {
+	color: black;
+}
+
+#nav__logout a {
+	color: inherit;
+	line-height: 30px;
+}
+
+#nav__div__log:hover #nav__logout {
+	display: block;
+}
+
+.nav__link:hover, .nav__log:hover, .nav__link--active {
 	background: linear-gradient(#66b033, #82cd51, #c1e6a8);
 }
 
@@ -79,8 +100,11 @@ nav {
 	margin: 0 5px;
 }
 
-#nav__logo__txt {
+.nav__txt {
 	cursor: default;
+}
+
+#nav__logo__txt {
 	padding: 0 12px 0 0;
 }
 
@@ -288,7 +312,7 @@ footer {
 	display: inline-block;
 	font: inherit;
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
 	padding: 4px 8px;
 	background: linear-gradient(#3d6b1f, #528e29, #66b033);
@@ -307,6 +331,16 @@ footer {
 	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
+/************************************************************/
+/*						Forgot password						*/
+/************************************************************/
+
+#form__forgot__password #error__message {
+	text-align: center;
+	color: darkred;
+}
+
+
 @media only screen and (max-width: 1024px) {
 
 	/************************************************************/
@@ -317,7 +351,7 @@ footer {
 		font-size: 1.6em;
 	}
 
-	.nav__txt, .nav__link, .nav__login {
+	.nav__txt, .nav__link, .nav__log {
 		line-height: 55px;
 	}
 
@@ -333,7 +367,7 @@ footer {
 		font-size: 1.4em;
 	}
 
-	.nav__txt, .nav__link, .nav__login {
+	.nav__txt, .nav__link, .nav__log {
 		line-height: 50px;
 	}
 

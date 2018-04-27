@@ -28,5 +28,6 @@ class ForgotPassword extends Initialize
 	private function main()
 	{
 		$this->result["headTitle"] = "Mot de passe oublié";
+		$this->result["libJs"] = ["forgot_password"];
 	} // end of private function main()
 }

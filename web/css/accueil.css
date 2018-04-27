@@ -1,0 +1,122 @@
+
+/*
+#content div {
+    border: 2px solid black;
+}
+*/
+
+/*============================
+======      CONTENT      =====
+=============================*/
+
+#content
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+/*============================
+=          HOME HEAD         =
+=============================*/
+
+#home__head
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
+}
+
+
+#home__head__img
+{
+    border: 1px solid black;
+    width: 39%;
+    height: 200px;
+}
+
+
+#home__head__content
+{
+    border: 1px solid black;
+    width: 59%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home__head__content__title
+{
+    width: 100%;
+}
+
+#home__head__content__txt
+{
+    width: 100%;
+}
+
+/*============================
+=         HOME SECTION       =
+=============================*/
+
+#home__section
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+#home__section__history
+{
+    
+}
+
+#home__section__history__tilte
+{
+    
+}
+
+#home__section__history__img
+{
+    
+}
+
+#home__section__history__txt
+{
+    
+}
+
+#home__section__map
+{
+    
+}
+
+#home__section__map__img
+{
+    
+}
+
+#home__section__map__txt
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

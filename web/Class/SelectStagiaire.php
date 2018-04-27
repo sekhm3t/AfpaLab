@@ -6,6 +6,7 @@ Class SelectStagiaire extends Initialize
 {
 
 	public $result;
+	private $id_session;
 
 	public function __construct()
 	{
@@ -28,13 +29,15 @@ Class SelectStagiaire extends Initialize
 
 	private function main()
 	{
-		
+		$this->id_session = $this->VARS_HTML["id_session"];
+		$this->getStudent();
+		echo json_encode($this->result);		
 	} // end of private function main()
 
 	private function getStudent(){
 		$spathSQLSelect = $this->GLOBALS_INI["PATHS"]["PATH_HOME"] . $this->GLOBALS_INI["PATHS"]["PATH_MODEL"] . "select_stagiaire.sql";
 
-		$this->result["liste_stagiaires"] = $this->obj_bdd->getSelectDatas(
+		$this->result["liste_stagiaire"] = $this->obj_bdd->getSelectDatas(
 			$spathSQLSelect,
 			array(
 				'id_session' => $this->id_session

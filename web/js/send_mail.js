@@ -5,9 +5,9 @@ function get_email_data(){
 		email_sender: $("#contact__mail").val(),
 		subject: $("#contact__subject").val(),
 		content: $("#contact__message").val(),
-		id: "61",
+		cle_utilisateur: $("#contact__key").val(),
 		bJSON: 1,
-		page: "MailManager"
+		page: "mailManager"
 	}
 
 	$.ajax(
@@ -29,7 +29,6 @@ function get_email_data(){
 			$("#contact__feedback").html(result.texte);
 			$("#contact__feedback").addClass("contact__feedback--return");
 		}
-		console.log(result);
 
 		
 	})
@@ -40,6 +39,5 @@ function get_email_data(){
 		$("#contact__feedback").html(result.texte);
 		$("#contact__feedback").addClass("contact__feedback--return");
 		
-		console.log(result["0"].texte);
 	});
 }

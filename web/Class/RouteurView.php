@@ -25,7 +25,7 @@ Class RouteurView	{
 		// Prepare and send view
 		$page_to_load= "route";
 		if ((isset($obj_main->VARS_HTML["bJSON"])) && ($obj_main->VARS_HTML["bJSON"] == 1))	{
-			$page_to_load= $obj_main->VARS_HTML["page"];
+			$page_to_load= "empty";
 		}
 		error_log("page_to_load = " . $page_to_load);
 		require_once $obj_main->GLOBALS_INI['PATHS']['PATH_HOME'] . $obj_main->GLOBALS_INI['PATHS']['PATH_VIEW'] . $page_to_load . ".html";
